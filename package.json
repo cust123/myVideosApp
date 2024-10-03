@@ -1,0 +1,20 @@
+{
+  "name": "myvideosapp",
+  "version": "1.0.0",
+  "description": "a backend application for managing the backend of video streaming application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev":"nodemon src/index.js"
+  },
+  "keywords": [
+    "node",
+    "mongoose",
+    "apis",
+    "models",
+    "and",
+    "controllers"
+  ],
+  "author": "Muhammad Shafiq",
+  "license": "ISC"
+}
