@@ -9,7 +9,20 @@ dotevn.config({
   path: "./env",
 });
 
-connectDB();
+connectDB()
+  .then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+      console.log(`Server is listening on PORT: ${process.env.PORT}`);
+    });
+    app.on("error", (error) => {
+      console.log("Error", error);
+      throw error;
+    });
+  })
+  .catch((error) => {
+    console.log("MongoDB connection FAILD !!!", error);
+  });
+
 /*
 import express from "express";
 
