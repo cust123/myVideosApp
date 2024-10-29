@@ -60,7 +60,18 @@ const registerUser = asyncHandler(async (req, res) => {
     .json(new apiResponse(201, createdUser, "user registered successfully!"));
 });
 
-export { registerUser };
+const loginUser = asyncHandler(async (req, res) => {
+  const { email, username, password } = req.body;
+  if (!username || !email) {
+    throw new ApiError(400, "User Name or Email is required");
+  }
+
+  const user = await User.findOne({
+    $or: [{ username }, { email }],
+  });
+});
+
+export { registerUser, loginUser };
 
 // if (fullname === "") {
 //   throw new apiError(400, "full name is required");
