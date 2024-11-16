@@ -227,7 +227,7 @@ const updateAccountDetails = asyncHandler(async (req, res) => {
     req.user?._id,
     {
       $set: {
-        fullName,
+        fullname: fullname,
         email: email,
       },
     },
@@ -238,6 +238,8 @@ const updateAccountDetails = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, user, "Account details updated successfully"));
 });
+
+const updateUserAvatar = asyncHandler(async (req, res) => {});
 export {
   registerUser,
   loginUser,
