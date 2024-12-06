@@ -310,6 +310,7 @@ export {
   getCurrentUser,
   updateAccountDetails,
   updateUserAvatar,
+  coverImage,
 };
 
 // if (fullname === "") {
