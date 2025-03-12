@@ -7,6 +7,10 @@ const subscriptionSchema = new Schema(
       type: Schema.Types.ObjectId, //  this user who is subscribing
       ref: "User",
     },
+    channel: {
+      type: Schema.Types.ObjectId, //  this user who is being subscribed to
+      ref: "User",
+    },
   },
   { timestamps: true }
 );
