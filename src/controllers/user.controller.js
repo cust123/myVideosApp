@@ -217,7 +217,7 @@ const getCurrentUser = asyncHandler(async (req, res) => {
       new ApiResponse(
         200,
         req.user,
-        "User fetched successfully from the Database!"
+        "currentUser fetched successfully from the Database!"
       )
     );
 });
